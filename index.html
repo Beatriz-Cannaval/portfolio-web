@@ -1,0 +1,92 @@
+<!DOCTYPE html> <!-- diz ao navegador que é um documento HTML5 -->
+<html lang="pt-BR"> <!-- define o idioma -->
+<head> <!-- parte invisivel da pagina onde define links, fontes, titulos e etc--> 
+  <meta charset="UTF-8" /> <!-- define codificação dos caracteres, permite usar acentos, emojis, ç, ã sem dar erros -->
+  <title>Beatriz Cannaval | Portfólio</title> <!-- nome que aparece na aba do navegador -->
+  <link rel="stylesheet" href="style.css" /> <!-- conecta o arquivo css -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"> <!-- importa fontes do google fontes -->
+
+</head>
+
+<body> <!-- tudo que é visivel para o usuario -->
+
+  <nav class="navbar"> <!--Adiciona uma Navbar-->
+  <a href="#portfolio">Sobre</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projetos</a>
+  <a href="#experience">Experiência</a>
+  <a href="#contact">Contato</a>
+</nav>
+
+  <!-- FUNDO ANIMADO -->
+  <div class="background"></div> <!-- dic vazia usada só para efeitos visuais -->
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="container"> <!-- indica o conteudo principal do site e aplica os estilos CSS -->
+    <h1>Oi, eu sou a Beatriz ✨</h1>
+
+   <p class="subtitle">
+      Estudante de Ciência da Computação
+     </p> <!-- texto -->
+    <button id="start-btn">Start</button> <!-- botao -->
+  </main>
+
+  <!-- NOVA SEÇÃO DO PORTFÓLIO -->
+<section id="portfolio" class="portfolio fade-in">
+  <h2>Sobre mim</h2>
+  <p>Sou estudante de Ciência da Computação, explorando diferentes áreas da tecnologia
+e aprendendo a transformar ideias em soluções criativas com código.
+Gosto de entender como as coisas funcionam, resolver problemas e construir
+projetos que unam lógica, organização e estética.</p>
+</section>
+
+<section id="skills" class="skills fade-in">
+  <h2>O que estou aprendendo?</h2>
+  <div class="skills-grid">
+  <span>HTML</span>
+  <span>CSS</span>  
+  <span>JavaScript</span>
+  <span>C++</span>
+  <span>Excel</span>
+</div>
+</section>
+
+<section id="projects" class="projects fade-in">
+  <h2>Projetos</h2>
+
+  <div class="project-card">
+    <h3>Calm Mind</h3>
+    <p>
+      Site desenvolvido como TCC com foco em ajudar pessoas com ansiedade 
+      e crises de pânico, oferecendo técnicas de respiração e apoio emocional.
+    </p>
+  </div>
+
+  <div class="project-card">
+    <h3>Exercícios em C++</h3>
+    <p>
+      Programas desenvolvidos durante meus estudos, com foco em lógica 
+      de programação e resolução de problemas.
+    </p>
+  </div>
+
+</section>
+<section id="experience" class="experience fade-in">
+  <h2>Experiência</h2>
+  <p>
+    Estagiária na Secretaria de Saúde, atuando no setor de compras e na 
+    validação de profissionais pela Cismetro.
+  </p>
+</section>
+<section id="contact" class="contact fade-in">
+  <h2>Contato</h2>
+  <p>Email: beatrizc.fferreira13@gmail.com</p>
+  <p>GitHub: github.com/seuusuario</p>
+  <p>Telefone: 19 98933-8244</p>
+</section>
+
+
+  <script src="script.js"></script> <!-- conecta o arquivo JavaScript -->
+</body>
+</html>
+

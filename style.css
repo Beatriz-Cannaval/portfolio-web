@@ -1,0 +1,263 @@
+/* RESET */
+* {
+  margin: 0; /* remove todas as margens padrão que o navegador coloca*/
+  padding: 0; /* remove todos os espaçamentos internos padrão*/
+  box-sizing: border-box; /* faz largura/altura incluirem padding + border no calculo, é padrão*/
+}
+
+/* CORPO */
+body { /* estiliza o corpo inteiro da pagina*/
+  font-family: 'Inter', sans-serif; /* fonte principal do site*/
+
+  /* rosa escuro elegante (sem neon) */
+  background: linear-gradient(180deg, #1a0f18, #23121d, #2b1622); /* cria um degrade vertical do topo para baixo usando tres tons*/
+
+  color: #f5f5f5; /* cor padrao dos textos*/
+  overflow-x: hidden; /* esconde qualquer coisa que ultrapasse a tela*/
+
+}
+
+
+/* CONTEÚDO CENTRAL */
+.container { /* estiliza a div principal que segura o conteudo*/
+  position: relative; /* permite usar z-index e posicionamentos internos*/
+  z-index: 2; /* coloca o conteudo na frente do fundo animado*/
+
+  height: 100vh; /* altura = 100% da tela*/
+
+  display: flex; /* ativa flexbox, facilita centralizar*/
+  flex-direction: column; /* elementos ficam um embaixo do outro*/
+  justify-content: center; /* centraliza verticalmente*/
+  align-items: center; /* centraliza horizontalmente*/
+
+  text-align: center; /* centraliza os textos */
+  gap: 20px; /* espaço automatico de 20px entre os elementos*/
+}
+
+h1 { /*TITULO*/
+  font-family: 'Playfair Display', serif; /* fonte*/
+  font-size: 40px; /* tamanho*/
+  font-weight: 600; /* meio negrito*/
+  letter-spacing: 0.5px; /* espaçamento entre as letras*/
+}
+
+p { /*PARAGRAFO*/
+  font-weight: 350; /* fino*/
+  color: #d8a7b3; /* cor*/
+}
+
+
+
+
+button {
+  padding: 12px 28px;
+  border-radius: 25px;
+  border: none;
+
+  background: linear-gradient(135deg, #e9a6b3, #f3c1cc);
+  color: #2b1622;
+
+  cursor: pointer;
+  font-size: 16px;
+
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.4);
+}
+
+button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(255, 182, 193, 0.7);
+}
+
+
+/* FUNDO */
+.background {
+  position: fixed; /* fica fixo na tela não rola*/
+  top: 0; /* começa no canto superior esquerdo*/
+  left: 0; /* começa no canto superior esquerdo*/
+
+  width: 100vw;/* ocupa a tela inteira*/
+  height: 100vh; /* ocupa a tela inteira*/
+
+  z-index: -1; /* vai atras de tudo*/
+  overflow: hidden; /* esconde bolinhas que sairem da tela */
+}
+
+
+/* BOLINHAS  */
+.background span { /* cada span vira uma bolinha*/
+  position: absolute; /* pode ser colocado livremente no fundo*/
+  bottom: -10px; /* começa um pouco abaixo da tela*/
+
+  background: rgba(255, 182, 193, 0.35); /* rosa pastel */
+  border-radius: 50%; /* forma circulo*/
+
+  box-shadow: none; /* sem brilho*/
+
+  animation: subir linear infinite; /* aplica a animação subir*/
+}
+
+
+/* tamanhos variados bolinhas */
+.background span:nth-child(odd) { /* bolinhas impares*/
+  width: 3px; /* pequenas*/
+  height: 3px; /* pequenas*/
+}
+
+.background span:nth-child(even) { /* bolinhas pares*/
+  width: 6px; /* maiores*/
+  height: 6px; /* maiores*/
+}
+
+
+/* ANIMAÇÃO */
+@keyframes subir { /* define a animação chamada subir*/
+  from { /* começa na posição normal  e invisivel*/
+    transform: translateY(0); /* começa na posição normal  e invisivel*/
+    opacity: 0; /* começa na posição normal  e invisivel*/
+  }
+  to { /* sobre 120% da altura da tela e fica visivel*/
+    transform: translateY(-120vh); /* sobre 120% da altura da tela e fica visivel*/
+    opacity: 1; /* sobre 120% da altura da tela e fica visivel*/
+  }
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.portfolio {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  gap: 20px;
+
+  padding: 40px;
+}
+
+.portfolio h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+}
+
+.portfolio p {
+  max-width: 600px;
+  line-height: 1.6;
+  color: #e6c4cc;
+}
+
+.skills {
+  flex-direction: column;
+  gap: 30px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skills-grid span {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: rgba(255, 182, 193, 0.15);
+  border: 1px solid rgba(255, 182, 193, 0.3);
+  font-size: 14px;
+}
+
+.projects {
+  flex-direction: column;
+  gap: 30px;
+}
+
+.project-card {
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 182, 193, 0.08);
+  border: 1px solid rgba(255, 182, 193, 0.2);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navbar {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+
+  display: flex;
+  gap: 20px;
+
+  z-index: 10;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-size: 14px;
+
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #f3c1cc;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+section::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #f3c1cc;
+  margin: 20px auto 0;
+  opacity: 0.5;
+}
+
+.experience, .contact {
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px;
+
+  max-width: 800px;   /* limita largura */
+  margin: 0 auto;     /* centraliza */
+}
+
+.experience p, .contact p {
+  text-align: center;
+  max-width: 600px;
+  line-height: 1.6;
+  color: #e6c4cc;
+}
+
+.experience {
+  background: rgba(255, 182, 193, 0.05);
+  border-radius: 15px;
+}
