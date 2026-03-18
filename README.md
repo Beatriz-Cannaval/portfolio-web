@@ -1,4 +1,3 @@
-# portfolio-web
 #  Portfólio - Beatriz Cannaval
 
 Este é o meu portfólio desenvolvido com HTML, CSS e JavaScript.
